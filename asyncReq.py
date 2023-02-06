@@ -1,4 +1,5 @@
 import grequests
+import json
 
 urls = [
     'https://jsonplaceholder.typicode.com/todos',
@@ -12,4 +13,4 @@ responses = grequests.map(response)
 print(responses)
 
 for i in responses:
-    print(i.text)
+    print(json.loads(i.text))
