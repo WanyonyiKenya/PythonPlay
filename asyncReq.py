@@ -10,3 +10,6 @@ urls = [
 response = (grequests.get(u) for u in urls)
 responses = grequests.map(response)
 print(responses)
+
+for i in responses:
+    print(i.text)
